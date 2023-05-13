@@ -1,0 +1,806 @@
+2023-05-06 22:17:57,108] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: describeprocess
+2023-05-08 07:09:54,585] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: describeprocess
+2023-05-08 07:10:35,610] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: describeprocess
+2023-05-08 07:10:48,543] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: describeprocess
+2023-05-08 07:11:17,734] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:11:34,674] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=43, msg='NoneType' object has no attribute 'GetLayer'
+2023-05-08 07:11:34,690] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_rmm0529x
+2023-05-08 07:11:55,242] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:12:34,818] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:12:41,404] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=43, msg='NoneType' object has no attribute 'GetLayer'
+2023-05-08 07:12:41,424] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process__vhnzxdw
+2023-05-08 07:12:47,958] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:14:02,513] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:14:02,587] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-08 07:14:05,588] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:14:05,609] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-08 07:14:56,367] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: describeprocess
+2023-05-08 07:15:07,648] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:15:07,677] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-08 07:15:36,884] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: describeprocess
+2023-05-08 07:15:39,968] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:29:17,309] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: describeprocess
+2023-05-08 07:29:22,769] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:30:14,182] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg='NoneType' object has no attribute 'SetGeoTransform'
+2023-05-08 07:30:14,201] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_49rjm6fg
+2023-05-08 07:31:15,330] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:39:19,017] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg='NoneType' object has no attribute 'SetGeoTransform'
+2023-05-08 07:39:19,036] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_tqjq0v1k
+2023-05-08 07:39:30,587] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:40:38,907] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:40:38,977] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-08 07:40:48,670] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:40:48,673] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 500, description: No applicable error code, please check error log., locator: 
+Traceback (most recent call last):
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: pywps_requests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py", line 292, in call
+    log_request(request_uuid, wps_request)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\dblog.py", line 76, in log_request
+    session.commit()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1905, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1220, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1195, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4153, in flush
+    self._flush(objects)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4289, in _flush
+    with util.safe_reraise():
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4250, in _flush
+    flush_context.execute()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 467, in execute
+    rec.execute(self)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 644, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1040, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\sql\elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1841, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: pywps_requests
+[SQL: INSERT INTO pywps_requests (uuid, pid, operation, version, time_start, time_end, identifier, message, percent_done, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('449bea75-ed6b-11ed-926f-04421a48713e', 16052, 'execute', '1.0.0', '2023-05-08 07:40:48.671097', None, 'simulator', None, None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-05-08 07:41:00,133] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:41:05,220] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg=cannot access local variable 'layer' where it is not associated with a value
+2023-05-08 07:41:05,236] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_tipd7m0a
+2023-05-08 07:41:38,818] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:41:50,986] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg=cannot access local variable 'layer' where it is not associated with a value
+2023-05-08 07:41:51,003] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_5jho7g74
+2023-05-08 07:41:55,537] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:41:58,149] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg=cannot access local variable 'layer' where it is not associated with a value
+2023-05-08 07:41:58,164] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_k2huw_z4
+2023-05-08 07:42:06,019] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:52:08,659] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:52:22,375] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:52:22,412] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-08 07:52:39,702] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg=not a sequence
+2023-05-08 07:52:39,720] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_wjwf_1q9
+2023-05-08 07:53:47,674] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:53:58,436] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg=in method 'RasterizeLayer', argument 5 of type 'void *'
+2023-05-08 07:53:58,450] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_m3_1l_99
+2023-05-08 07:54:09,550] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:54:09,665] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=44, msg=in method 'RasterizeLayer', argument 5 of type 'void *'
+2023-05-08 07:54:09,677] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_6gy58qtc
+2023-05-08 07:54:16,078] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:55:37,160] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:56:45,663] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:56:45,739] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-08 07:56:54,021] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:56:54,024] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 500, description: No applicable error code, please check error log., locator: 
+Traceback (most recent call last):
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: pywps_requests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py", line 292, in call
+    log_request(request_uuid, wps_request)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\dblog.py", line 76, in log_request
+    session.commit()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1905, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1220, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1195, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4153, in flush
+    self._flush(objects)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4289, in _flush
+    with util.safe_reraise():
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4250, in _flush
+    flush_context.execute()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 467, in execute
+    rec.execute(self)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 644, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1040, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\sql\elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1841, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: pywps_requests
+[SQL: INSERT INTO pywps_requests (uuid, pid, operation, version, time_start, time_end, identifier, message, percent_done, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('8400d666-ed6d-11ed-afa8-04421a48713e', 16856, 'execute', '1.0.0', '2023-05-08 07:56:54.021898', None, 'simulator', None, None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-05-08 07:57:01,265] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:57:01,267] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 500, description: No applicable error code, please check error log., locator: 
+Traceback (most recent call last):
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: pywps_requests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py", line 292, in call
+    log_request(request_uuid, wps_request)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\dblog.py", line 76, in log_request
+    session.commit()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1905, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1220, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1195, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4153, in flush
+    self._flush(objects)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4289, in _flush
+    with util.safe_reraise():
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4250, in _flush
+    flush_context.execute()
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 467, in execute
+    rec.execute(self)
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 644, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1040, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\sql\elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1841, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: pywps_requests
+[SQL: INSERT INTO pywps_requests (uuid, pid, operation, version, time_start, time_end, identifier, message, percent_done, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('885229ef-ed6d-11ed-95a9-04421a48713e', 16856, 'execute', '1.0.0', '2023-05-08 07:57:01.265764', None, 'simulator', None, None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-05-08 07:57:15,650] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:57:29,996] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=45, msg=Rasterize() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDS'
+2023-05-08 07:57:30,012] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_owy99yqc
+2023-05-08 07:59:10,877] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 07:59:16,308] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=50, msg=Rasterize() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDS'
+2023-05-08 07:59:16,326] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_gazgg2q8
+2023-05-08 21:20:54,825] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:21:00,048] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:21:00,062] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_1giwfm_q
+2023-05-08 21:25:07,291] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:25:10,015] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:25:10,029] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_drwkkrdc
+2023-05-08 21:29:35,330] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:29:38,162] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:29:38,178] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_u7bp8tio
+2023-05-08 21:31:02,626] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:31:06,442] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:31:06,453] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_ay655zpw
+2023-05-08 21:36:44,407] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:37:27,884] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:37:27,898] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_dpalrya2
+2023-05-08 21:37:30,926] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:43:37,785] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:43:37,809] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process__u9gmlws
+2023-05-08 21:44:05,322] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:44:31,582] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:44:31,595] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_hkgc5k4p
+2023-05-08 21:45:22,266] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:45:29,903] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:45:29,920] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_c_mypgdj
+2023-05-08 21:46:55,074] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 21:47:01,714] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 21:47:01,726] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_chkq6qz2
+2023-05-08 21:51:05,715] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:03:14,009] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:03:17,469] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:03:17,497] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-08 22:03:22,794] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 22:03:22,812] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_cotv3z_b
+2023-05-08 22:03:47,857] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:03:52,546] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 22:03:52,563] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_dpxucm_b
+2023-05-08 22:05:01,705] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:05:06,562] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 22:05:06,580] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_sspii18g
+2023-05-08 22:05:18,538] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:05:23,410] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 22:05:23,427] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_zi4854o2
+2023-05-08 22:06:16,054] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:06:21,334] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 22:06:21,346] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_jphxr8lg
+2023-05-08 22:11:47,163] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-08 22:11:51,982] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-08 22:11:51,994] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process__r72suq7
+2023-05-09 06:35:20,189] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 06:35:32,184] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-09 06:35:32,197] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_mx_evdxo
+2023-05-09 06:36:04,553] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 06:36:36,449] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-09 06:36:36,461] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_jkixis9l
+2023-05-09 07:01:08,023] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 07:01:08,345] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=52, msg=[WinError 2] O sistema não conseguiu localizar o ficheiro especificado
+2023-05-09 07:01:08,359] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_0b4dzu4d
+2023-05-09 20:44:56,048] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 20:44:56,634] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=52, msg=[WinError 193] %1 não é uma aplicação de Win32 válida
+2023-05-09 20:44:56,651] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_l50wy0y3
+2023-05-09 20:45:26,659] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 20:48:17,316] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 20:48:17,393] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-09 20:48:21,704] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 20:48:21,727] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-09 20:49:07,466] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 20:49:09,844] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=56, msg=Warp() missing 2 required positional arguments: 'destNameOrDestDS' and 'srcDSOrSrcDSTab'
+2023-05-09 20:49:09,864] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_25vucj6a
+2023-05-09 20:50:27,051] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 20:55:07,249] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 20:55:10,273] [ERROR] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=52, msg='VIRTUAL_ENV'
+2023-05-09 20:55:10,293] [INFO] file=C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_b5kb4ltn
+2023-05-09 21:06:09,670] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:06:09,846] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=51, msg='NoneType' object has no attribute 'GetLayer'
+2023-05-09 21:06:09,858] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_dzqrnz95
+2023-05-09 21:07:14,208] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:07:14,554] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_iu9pxxad
+2023-05-09 21:07:27,741] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:07:28,073] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=52, msg=[WinError 193] %1 não é uma aplicação de Win32 válida
+2023-05-09 21:07:28,085] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_ymxvoiqx
+2023-05-09 21:07:54,671] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:13:18,424] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:13:18,493] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:13:18,499] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-09 21:13:18,527] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-09 21:14:01,641] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:14:06,727] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=52, msg=[WinError 193] %1 não é uma aplicação de Win32 válida
+2023-05-09 21:14:06,742] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_m5t9r8kq
+2023-05-09 21:15:00,303] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:15:02,384] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=52, msg=[WinError 193] %1 não é uma aplicação de Win32 válida
+2023-05-09 21:15:02,397] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_cnap1mo9
+2023-05-09 21:16:46,688] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:16:51,446] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_34gwvtgj
+2023-05-09 21:17:08,658] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:17:12,481] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_oa6db2hs
+2023-05-09 21:26:11,783] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:26:18,527] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_w_kup5fy
+2023-05-09 21:34:41,999] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:38:12,605] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:40:15,627] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_x0kv2wzr
+2023-05-09 21:40:23,504] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:40:54,987] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:40:55,067] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-09 21:41:58,211] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:41:58,215] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 500, description: No applicable error code, please check error log., locator: 
+Traceback (most recent call last):
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: pywps_requests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py", line 292, in call
+    log_request(request_uuid, wps_request)
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\dblog.py", line 76, in log_request
+    session.commit()
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1905, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1220, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1195, in _prepare_impl
+    self.session.flush()
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4153, in flush
+    self._flush(objects)
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4289, in _flush
+    with util.safe_reraise():
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4250, in _flush
+    flush_context.execute()
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 467, in execute
+    rec.execute(self)
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 644, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1040, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1413, in execute
+    return meth(
+           ^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1841, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 920, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: pywps_requests
+[SQL: INSERT INTO pywps_requests (uuid, pid, operation, version, time_start, time_end, identifier, message, percent_done, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('f1367820-eea9-11ed-b98f-04421a48713e', 11236, 'execute', '1.0.0', '2023-05-09 21:41:58.211587', None, 'simulator', None, None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-05-09 21:42:11,805] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:53:20,181] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:53:53,501] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:53:53,580] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-09 21:54:24,380] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 21:56:42,591] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 22:02:02,988] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 22:02:03,067] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-09 22:02:18,138] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-09 22:02:26,270] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=53, msg=expected str, bytes or os.PathLike object, not tuple
+2023-05-09 22:02:26,283] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_ydbr6z8v
+2023-05-09 22:04:10,611] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:16:50,081] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:19:08,883] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:19:08,961] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-10 06:19:35,225] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:20:35,042] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_77565wsp
+2023-05-10 06:21:12,062] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:21:52,466] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_b7jjjkjs
+2023-05-10 06:24:06,646] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:25:31,729] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_qeu86pwi
+2023-05-10 06:26:31,942] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:26:55,034] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_722mdc14
+2023-05-10 06:29:49,359] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:30:18,185] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_qjhitt5o
+2023-05-10 06:30:44,628] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:30:54,726] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=tuple.count() takes exactly one argument (0 given)
+2023-05-10 06:30:54,737] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_bqgj9dtk
+2023-05-10 06:31:29,533] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:31:37,492] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg='tuple' object has no attribute 'len'
+2023-05-10 06:31:37,510] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_3vrd5rp7
+2023-05-10 06:31:54,578] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:32:02,652] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg='tuple' object has no attribute 'len'
+2023-05-10 06:32:02,663] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_yo8p50wt
+2023-05-10 06:32:13,847] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:32:25,486] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_tdmonftq
+2023-05-10 06:32:55,503] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:33:10,506] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_0gttmlhr
+2023-05-10 06:35:18,831] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:35:53,116] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_k3l3k9pd
+2023-05-10 06:36:02,575] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:36:11,890] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_jldf6qhl
+2023-05-10 06:36:48,189] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:36:56,228] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=54, msg=can only concatenate tuple (not "str") to tuple
+2023-05-10 06:36:56,246] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_227oa07z
+2023-05-10 06:37:13,893] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:37:21,283] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_cu1e768w
+2023-05-10 06:37:29,092] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:37:36,427] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_f49wbh59
+2023-05-10 06:47:28,042] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:47:35,779] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=55, msg=expected str, bytes or os.PathLike object, not int
+2023-05-10 06:47:35,792] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_modj0sg3
+2023-05-10 06:48:27,965] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:48:49,036] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=55, msg=expected str, bytes or os.PathLike object, not int
+2023-05-10 06:48:49,053] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_p2hl62ve
+2023-05-10 06:49:13,693] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:49:42,578] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=55, msg=expected str, bytes or os.PathLike object, not int
+2023-05-10 06:49:42,596] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_73pya72h
+2023-05-10 06:50:02,301] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:50:11,635] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=55, msg=expected str, bytes or os.PathLike object, not int
+2023-05-10 06:50:11,654] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_ek1m3qei
+2023-05-10 06:50:53,914] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:51:05,665] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=55, msg=expected str, bytes or os.PathLike object, not int
+2023-05-10 06:51:05,683] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_bh4eud62
+2023-05-10 06:51:17,341] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:52:08,036] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=55, msg=expected str, bytes or os.PathLike object, not int
+2023-05-10 06:52:08,056] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_ng7pxxlz
+2023-05-10 06:52:57,525] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:53:11,077] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_gj3wmvsl
+2023-05-10 06:53:45,475] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-10 06:53:58,616] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_8f9iisq0
+2023-05-13 06:32:33,472] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:32:33,534] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:32:33,670] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg='criteria'
+2023-05-13 06:32:33,681] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_qque0twb
+2023-05-13 06:40:12,515] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:40:12,529] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=137 module=Service function=_parse_and_execute Missing parameter value: name
+2023-05-13 06:40:12,529] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: name, locator: name
+NoneType: None
+2023-05-13 06:46:30,468] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:46:30,480] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=137 module=Service function=_parse_and_execute Missing parameter value: name
+2023-05-13 06:46:30,480] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: name, locator: name
+NoneType: None
+2023-05-13 06:47:07,950] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:47:08,002] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=137 module=Service function=_parse_and_execute Missing parameter value: criteria
+2023-05-13 06:47:08,002] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: criteria, locator: criteria
+NoneType: None
+2023-05-13 06:48:15,870] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:48:15,888] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=137 module=Service function=_parse_and_execute Missing parameter value: criteria
+2023-05-13 06:48:15,888] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: criteria, locator: criteria
+NoneType: None
+2023-05-13 06:48:38,178] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Missing request value, locator: request
+NoneType: None
+2023-05-13 06:48:44,329] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Missing request value, locator: request
+NoneType: None
+2023-05-13 06:48:54,146] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 06:48:54,146] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 06:48:54,146] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:48:54,155] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:48:54,276] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not deque
+2023-05-13 06:48:54,289] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_zmxoy0df
+2023-05-13 06:49:15,271] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 06:49:15,271] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 06:49:15,271] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:49:15,283] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:53:44,678] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not deque
+2023-05-13 06:53:44,697] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_q0y71rut
+2023-05-13 06:56:04,900] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 06:56:04,900] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 06:56:04,900] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:56:04,954] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:56:08,186] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not deque
+2023-05-13 06:56:08,200] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_mse88rvj
+2023-05-13 06:56:37,335] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 06:56:37,335] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 06:56:37,335] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:56:37,349] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:58:44,925] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not deque
+2023-05-13 06:58:44,944] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process__d82yac_
+2023-05-13 06:58:46,342] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 06:58:46,342] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 06:58:46,342] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:58:46,357] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:59:13,972] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not deque
+2023-05-13 06:59:13,984] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_12f3zu9q
+2023-05-13 06:59:22,378] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 06:59:22,379] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 06:59:22,379] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:59:22,387] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:59:26,960] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not deque
+2023-05-13 06:59:26,979] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_hb16l255
+2023-05-13 06:59:36,320] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 06:59:36,321] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 06:59:36,321] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 06:59:36,331] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 06:59:57,271] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not deque
+2023-05-13 06:59:57,290] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_dcg02hq1
+2023-05-13 07:01:59,711] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:01:59,711] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 07:01:59,711] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:01:59,756] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:02:02,551] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not NoneType
+2023-05-13 07:02:02,570] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_0eu9b1t1
+2023-05-13 07:02:06,835] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:02:06,835] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 07:02:06,835] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:02:06,843] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:03:51,599] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:03:51,600] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 07:03:51,600] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:03:51,647] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:04:43,843] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not NoneType
+2023-05-13 07:04:43,861] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_h8vur_zk
+2023-05-13 07:05:07,649] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:05:07,649] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 07:05:07,649] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:05:07,665] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:05:09,526] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not NoneType
+2023-05-13 07:05:09,537] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_ufn4xswj
+2023-05-13 07:06:18,805] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:06:18,805] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 07:06:18,805] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:06:18,821] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:07:42,745] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not NoneType
+2023-05-13 07:07:42,765] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_mhvc1s7r
+2023-05-13 07:08:40,827] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:08:40,879] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=137 module=Service function=_parse_and_execute Missing parameter value: criteria
+2023-05-13 07:08:40,879] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: criteria, locator: criteria
+NoneType: None
+2023-05-13 07:08:51,085] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:10:12,248] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=Expecting value: line 1 column 1 (char 0)
+2023-05-13 07:10:12,261] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_srobkpcj
+2023-05-13 07:10:14,307] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:10:14,307] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: name
+2023-05-13 07:10:14,309] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:10:14,325] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=137 module=Service function=_parse_and_execute Missing parameter value: criteria
+2023-05-13 07:10:14,325] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: criteria, locator: criteria
+NoneType: None
+2023-05-13 07:10:19,493] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:10:19,493] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 07:10:19,493] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:10:39,522] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not NoneType
+2023-05-13 07:10:39,538] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_eb7wmwdt
+2023-05-13 07:13:30,475] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Invalid control character at: line 5 column 17 (char 86), locator: 
+Traceback (most recent call last):
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py", line 123, in _post_request
+    jdoc = json.loads(self.http_request.get_data())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid control character at: line 5 column 17 (char 86)
+2023-05-13 07:14:40,038] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:15:08,458] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=69, msg='function_type'
+2023-05-13 07:15:08,471] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_zrwtdlh7
+2023-05-13 07:15:52,400] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:15:52,448] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:16:15,793] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=69, msg='function_type'
+2023-05-13 07:16:15,804] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_8kejarev
+2023-05-13 07:16:22,446] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:16:22,456] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:16:46,121] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=69, msg='function_type'
+2023-05-13 07:16:46,133] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_bjdwkqc7
+2023-05-13 07:17:00,088] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=498 module=WPSRequest function=json LiteralInput.__init__() got an unexpected keyword argument 'CriteriaType'
+2023-05-13 07:17:00,088] [WARNING] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py line=499 module=WPSRequest function=json skipping input: criteria
+2023-05-13 07:17:00,088] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:17:00,102] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:24:01,493] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=the JSON object must be str, bytes or bytearray, not NoneType
+2023-05-13 07:24:01,510] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_0x6_e8fh
+2023-05-13 07:26:54,110] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: XML declaration allowed only at the start of the document, line 9, column 6 (<string>, line 9), locator: 
+Traceback (most recent call last):
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py", line 109, in _post_request
+    doc = etree.fromstring(self.http_request.get_data())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\xml_util.py", line 12, in fromstring
+    return _etree.fromstring(text, parser=PARSER)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3257, in lxml.etree.fromstring
+  File "src\lxml\parser.pxi", line 1916, in lxml.etree._parseMemoryDocument
+  File "src\lxml\parser.pxi", line 1803, in lxml.etree._parseDoc
+  File "src\lxml\parser.pxi", line 1144, in lxml.etree._BaseParser._parseDoc
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "<string>", line 9
+lxml.etree.XMLSyntaxError: XML declaration allowed only at the start of the document, line 9, column 6
+2023-05-13 07:28:11,065] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: XML declaration allowed only at the start of the document, line 9, column 6 (<string>, line 9), locator: 
+Traceback (most recent call last):
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py", line 109, in _post_request
+    doc = etree.fromstring(self.http_request.get_data())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\xml_util.py", line 12, in fromstring
+    return _etree.fromstring(text, parser=PARSER)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3257, in lxml.etree.fromstring
+  File "src\lxml\parser.pxi", line 1916, in lxml.etree._parseMemoryDocument
+  File "src\lxml\parser.pxi", line 1803, in lxml.etree._parseDoc
+  File "src\lxml\parser.pxi", line 1144, in lxml.etree._BaseParser._parseDoc
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "<string>", line 9
+lxml.etree.XMLSyntaxError: XML declaration allowed only at the start of the document, line 9, column 6
+2023-05-13 07:28:21,829] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:28:21,836] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:28:40,189] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=69, msg='function_type'
+2023-05-13 07:28:40,201] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_vl89xp47
+2023-05-13 07:28:40,204] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Process failed, please check server error log, locator: 
+NoneType: None
+2023-05-13 07:28:49,003] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:28:49,011] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:28:54,963] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=Extra data: line 2 column 65 (char 65)
+2023-05-13 07:28:54,981] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_1xhr9byw
+2023-05-13 07:28:54,985] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Process failed, please check server error log, locator: 
+NoneType: None
+2023-05-13 07:28:59,485] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:28:59,501] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:29:06,755] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=64, msg=Extra data: line 2 column 65 (char 65)
+2023-05-13 07:29:06,773] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_2gqxcmh1
+2023-05-13 07:29:06,776] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Process failed, please check server error log, locator: 
+NoneType: None
+2023-05-13 07:29:44,322] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:29:44,331] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\validator\complexvalidator.py line=195 module=complexvalidator function=validatejson validating JSON; Mode: 0
+2023-05-13 07:29:57,910] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=69, msg='function_type'
+2023-05-13 07:29:57,922] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_kxfs0mur
+2023-05-13 07:29:57,925] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Process failed, please check server error log, locator: 
+NoneType: None
+2023-05-13 07:31:56,250] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Opening and ending tag mismatch: Weight line 18 and wps:ComplexData, line 19, column 27 (<string>, line 19), locator: 
+Traceback (most recent call last):
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py", line 109, in _post_request
+    doc = etree.fromstring(self.http_request.get_data())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\xml_util.py", line 12, in fromstring
+    return _etree.fromstring(text, parser=PARSER)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3257, in lxml.etree.fromstring
+  File "src\lxml\parser.pxi", line 1916, in lxml.etree._parseMemoryDocument
+  File "src\lxml\parser.pxi", line 1803, in lxml.etree._parseDoc
+  File "src\lxml\parser.pxi", line 1144, in lxml.etree._BaseParser._parseDoc
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "<string>", line 19
+lxml.etree.XMLSyntaxError: Opening and ending tag mismatch: Weight line 18 and wps:ComplexData, line 19, column 27
+2023-05-13 07:32:21,597] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:38:26,371] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Opening and ending tag mismatch: LiteralData line 15 and ComplexData, line 17, column 27 (<string>, line 17), locator: 
+Traceback (most recent call last):
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\WPSRequest.py", line 109, in _post_request
+    doc = etree.fromstring(self.http_request.get_data())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\xml_util.py", line 12, in fromstring
+    return _etree.fromstring(text, parser=PARSER)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3257, in lxml.etree.fromstring
+  File "src\lxml\parser.pxi", line 1916, in lxml.etree._parseMemoryDocument
+  File "src\lxml\parser.pxi", line 1803, in lxml.etree._parseDoc
+  File "src\lxml\parser.pxi", line 1144, in lxml.etree._BaseParser._parseDoc
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "<string>", line 17
+lxml.etree.XMLSyntaxError: Opening and ending tag mismatch: LiteralData line 15 and ComplexData, line 17, column 27
+2023-05-13 07:38:32,323] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:38:32,403] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-13 07:38:53,907] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:39:17,453] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=68, msg='function_type'
+2023-05-13 07:39:17,465] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_n1pz43kd
+2023-05-13 07:39:17,476] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Process failed, please check server error log, locator: 
+NoneType: None
+2023-05-13 07:39:28,811] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:44:00,952] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:47:59,174] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:47:59,248] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Maximum number of parallel running processes reached. Please try later., locator: 
+NoneType: None
+2023-05-13 07:48:14,705] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:49:30,127] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=279 module=Process function=_run_process Process error: method=house_searching_simulator.py._handler, line=66, msg=list indices must be integers or slices, not str
+2023-05-13 07:49:30,140] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_ui22w19v
+2023-05-13 07:49:30,149] [ERROR] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\exceptions.py line=48 module=exceptions function=__init__ Exception: code: 400, description: Process failed, please check server error log, locator: 
+NoneType: None
+2023-05-13 07:52:15,571] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:52:37,179] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_lst2gxal
+2023-05-13 07:52:44,880] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:53:19,888] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_bwdjlp65
+2023-05-13 07:53:22,318] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:53:59,310] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_8oeyx5bf
+2023-05-13 07:54:01,156] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:54:22,857] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_if_ly1c2
+2023-05-13 07:54:50,921] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:55:17,419] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_5q5yper6
+2023-05-13 07:56:38,660] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:57:40,988] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_p1qi3w1w
+2023-05-13 07:57:43,679] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:58:32,150] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_onsby6r9
+2023-05-13 07:58:48,309] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Service.py line=288 module=Service function=call Request: execute
+2023-05-13 07:59:16,733] [INFO] file=c:\Users\bruno\Projects\HousingSearchSimulator\wps-service\.venv\Lib\site-packages\pywps\app\Process.py line=327 module=Process function=clean Removing temporary working directory: C:\Users\bruno\Projects\HousingSearchSimulator\wps-service\workdir\pywps_process_svlvxf6p

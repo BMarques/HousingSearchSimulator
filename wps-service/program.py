@@ -26,11 +26,11 @@ import flask
 
 import pywps
 from pywps import Service
-
+import pywps.configuration as config
 # from processes.sleep import Sleep
 # from processes.ultimate_question import UltimateQuestion
 # from processes.centroids import Centroids
-from processes.sayhello import SayHello
+from processes.house_searching_simulator import HouseSearchSimulator
 # from processes.feature_count import FeatureCount
 # from processes.buffer import Buffer
 # from processes.area import Area
@@ -41,11 +41,11 @@ from processes.sayhello import SayHello
 app = flask.Flask(__name__)
 
 processes = [
-    SayHello()
+    HouseSearchSimulator()
 ]
 
-# How to test SayHello
-# http://localhost:5000/wps?service=WPS&version=1.0.0&request=Execute&identifier=say_hello&dataInputs=name=OSGeo-Live
+# How to test HouseSearchSimulator
+# http://localhost:5000/wps?service=WPS&version=1.0.0&request=Execute&identifier=simulator&dataInputs=name=OSGeo-Live
 
 # For the process list on the home page
 
@@ -58,21 +58,17 @@ for process in processes:
 # This is, how you start PyWPS instance
 service = Service(processes, ['pywps.cfg'])
 
-
 @app.route("/")
 def hello():
-    server_url = pywps.configuration.get_config_value("server", "url")
     request_url = flask.request.url
+    server_url = request_url + "/wps"
     return flask.render_template('home.html', request_url=request_url,
                                  server_url=server_url,
                                  process_descriptor=process_descriptor)
 
-
 @app.route('/wps', methods=['GET', 'POST'])
 def wps():
-
     return service
-
 
 @app.route('/outputs/'+'<path:filename>')
 def outputfile(filename):
