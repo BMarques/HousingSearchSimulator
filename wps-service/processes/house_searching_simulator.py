@@ -7,7 +7,7 @@ os.environ.pop('PROJ_LIB', None)
 
 from enum import IntEnum
 
-from pywps import Process, LiteralInput, LiteralOutput
+from pywps import Process, LiteralInput, ComplexOutput, Format, FORMATS
 from osgeo import gdal
 from osgeo import ogr
 from geo.Geoserver import Geoserver
@@ -31,19 +31,16 @@ class HouseSearchSimulator(Process):
     GDAL_CALC_PATH = os.path.join(os.getcwd(), '.venv/Scripts/gdal_calc.py')
 
     def __init__(self):
-        # Need inputs for:
-        # ComplexInput in Json { ' 'CriteriaType': 1, 'FunctionType': 1, 'Weight': 1 } 
         inputs = [LiteralInput('data', 'data', data_type="string")]
-        outputs = [LiteralOutput('response', 'Output response', data_type='boolean')]
+        outputs = [ComplexOutput('response',
+                                 'Output response', supported_formats=[Format('application/json')])]
 
         # Set the attributes
         super(HouseSearchSimulator, self).__init__(
             self._handler,
             identifier='simulator',
             title='Process House Searching Simulator',
-            abstract='Returns a literal string output\
-             with Hello plus the inputed name',
-            version='1.3.3.7',
+            abstract='TODO',
             inputs=inputs,
             outputs=outputs,
             store_supported=True,
@@ -61,22 +58,24 @@ class HouseSearchSimulator(Process):
         # Parse inputs from request
         data = json.loads(request.inputs['data'][0].data)
         criteria = data["Criteria"]
+        person_id = data["PersonId"]
+
         # Derive
         self.derive()
         # Transform
         school_reclass, metro_reclass = self.transform(criteria)
         # Weight and Combine
-        suitability = self.weight_combine((school_reclass, criteria[0]["Weight"]), (metro_reclass, criteria[1]["Weight"]))
+        suitability = self.weight_combine((school_reclass, criteria[0]['Weight']), (metro_reclass, criteria[1]['Weight']))
         # Locate suitable regions
         suitableregions = self.locate(suitability)
-
         # Send the suitability map to geoserver
-        self.submit_to_geoserver(suitableregions)
+        url, layer = self.submit_to_geoserver(suitableregions, person_id)
 
         #TODO: In case of failure in any of the steps before, return False, use a try catch finally.
+        out_bytes = json.dumps(json.loads('{"url":"'+ url +'","layer":"' + layer + '"}'))
 
-        response.outputs['response'].data = True
-
+        response.outputs['response'].data_format = FORMATS.JSON
+        response.outputs['response'].data = out_bytes
         return response
     
     def _generate_raster(self, infile, outfile):
@@ -130,7 +129,7 @@ class HouseSearchSimulator(Process):
             return f"10*(A>{values[0]}) + 5*(A>{values[1]})*(A<={values[0]}) + 1*(A<{values[1]})"
         if function_type == FunctionType.MIDPOINT:
             return f"1*(A<{values[0]}) + 1*(A>{values[1]}) + 5*(A>{values[2]})*(A<={values[1]}) + 10*(A>={values[0]})*(A<={values[2]})"
-
+        
     def derive(self):
         # Derive school distance
         schools_shapefile_location = os.path.join(self.DATA_PATH, "POIEducacao")
@@ -187,15 +186,21 @@ class HouseSearchSimulator(Process):
     def locate(self, suitabilitymap):
         nodatavalue = '0'
         suitableregions = os.path.join(self.OUTPUT_PATH, "final_suitability_map.tif")
-        calc = "0*(A<13)+1*(A>=13)"
+        calc = "0*(A<13)+A*(A>=13)"
         subprocess.call([sys.executable, self.GDAL_CALC_PATH, '-A', suitabilitymap, '--outfile', suitableregions, f'--calc="{calc}"', '--NoDataValue', nodatavalue, '--overwrite' ])
         return suitableregions
 
-    def submit_to_geoserver(self, suitableregions, email):
+    def submit_to_geoserver(self, suitable_regions, person_id):
         geo = Geoserver('http://127.0.0.1:8080/geoserver', username='admin', password='geoserver')
         workspace = 'csig'
+        layer_name = f'SuitabilityRegions_{person_id}'
+        style_name = 'suitability_style'
         # This will take care of everything in one line instead of having to do manually the following tasks
         # 1 - Create geotiff store on the defined workspace
         # 2 - Add new layer to the store created in #1
         # 3 - Publish layer created in #2 
-        geo.create_coveragestore(layer_name=f'SuitabilityRegions_{email}', path=suitableregions, workspace=workspace)
+        geo.create_coveragestore(layer_name=layer_name, path=suitable_regions, workspace=workspace)
+        # 4 - Update layer with the properly styling. This script assumes it is there already. If it's not,
+        # an admin should go to geoserver and create it. It's not the responsibility of this process.
+        geo.publish_style(layer_name=layer_name, style_name=style_name, workspace=workspace)
+        return "http://localhost:8080/geoserver/wms", f"{workspace}:{layer_name}"
