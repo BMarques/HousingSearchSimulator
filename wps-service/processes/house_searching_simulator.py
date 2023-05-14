@@ -5,11 +5,12 @@ import sys
 os.environ.pop('GDAL_DATA', None)
 os.environ.pop('PROJ_LIB', None)
 
-from pywps import Process, LiteralInput, LiteralOutput, Format
+from enum import IntEnum
+
+from pywps import Process, LiteralInput, LiteralOutput
 from osgeo import gdal
 from osgeo import ogr
-
-from enum import IntEnum
+from geo.Geoserver import Geoserver
 
 import subprocess
 import json
@@ -31,8 +32,8 @@ class HouseSearchSimulator(Process):
 
     def __init__(self):
         # Need inputs for:
-        # ComplexInput in Json { 'CriteriaType': 1, 'FunctionType': 1, 'Weight': 1 } 
-        inputs = [LiteralInput('criteria', 'Criteria', data_type="string")]
+        # ComplexInput in Json { ' 'CriteriaType': 1, 'FunctionType': 1, 'Weight': 1 } 
+        inputs = [LiteralInput('data', 'data', data_type="string")]
         outputs = [LiteralOutput('response', 'Output response', data_type='boolean')]
 
         # Set the attributes
@@ -58,8 +59,8 @@ class HouseSearchSimulator(Process):
         #     Once locations are retrieved, rasterize them. (Derive)
 
         # Parse inputs from request
-        criteria = json.loads(request.inputs['criteria'][0].data)
-
+        data = json.loads(request.inputs['data'][0].data)
+        criteria = data["Criteria"]
         # Derive
         self.derive()
         # Transform
@@ -67,11 +68,14 @@ class HouseSearchSimulator(Process):
         # Weight and Combine
         suitability = self.weight_combine((school_reclass, criteria[0]["Weight"]), (metro_reclass, criteria[1]["Weight"]))
         # Locate suitable regions
-        self.locate(suitability)
+        suitableregions = self.locate(suitability)
+
+        # Send the suitability map to geoserver
+        self.submit_to_geoserver(suitableregions)
 
         #TODO: In case of failure in any of the steps before, return False, use a try catch finally.
 
-        response.outputs['response'].data = "True"
+        response.outputs['response'].data = True
 
         return response
     
@@ -185,3 +189,13 @@ class HouseSearchSimulator(Process):
         suitableregions = os.path.join(self.OUTPUT_PATH, "final_suitability_map.tif")
         calc = "0*(A<13)+1*(A>=13)"
         subprocess.call([sys.executable, self.GDAL_CALC_PATH, '-A', suitabilitymap, '--outfile', suitableregions, f'--calc="{calc}"', '--NoDataValue', nodatavalue, '--overwrite' ])
+        return suitableregions
+
+    def submit_to_geoserver(self, suitableregions, email):
+        geo = Geoserver('http://127.0.0.1:8080/geoserver', username='admin', password='geoserver')
+        workspace = 'csig'
+        # This will take care of everything in one line instead of having to do manually the following tasks
+        # 1 - Create geotiff store on the defined workspace
+        # 2 - Add new layer to the store created in #1
+        # 3 - Publish layer created in #2 
+        geo.create_coveragestore(layer_name=f'SuitabilityRegions_{email}', path=suitableregions, workspace=workspace)
