@@ -1,42 +1,15 @@
-#!/usr/bin/env python3
-
-# Copyright (c) 2016 PyWPS Project Steering Committee
-# 
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
+# Reminders
+# GetCapabilities: http://localhost:5000/wps?request=GetCapabilities&service=WPS
 
 import os
+
 import flask
 
-import pywps
 from pywps import Service
-import pywps.configuration as config
-# from processes.sleep import Sleep
-# from processes.ultimate_question import UltimateQuestion
-# from processes.centroids import Centroids
 from processes.house_searching_simulator import HouseSearchSimulator
-# from processes.feature_count import FeatureCount
-# from processes.buffer import Buffer
-# from processes.area import Area
-# from processes.bboxinout import Box
-# from processes.jsonprocess import TestJson
 
+# This is needed for local development, so that javascript is able to call the service
+# This essentially instructs flask to put the access-control-allow-origin = * on the headers
 from flask_cors import CORS
 
 app = flask.Flask(__name__)
@@ -46,59 +19,15 @@ processes = [
     HouseSearchSimulator()
 ]
 
-# How to test HouseSearchSimulator
-# http://localhost:5000/wps?service=WPS&version=1.0.0&request=Execute&identifier=simulator&dataInputs=name=OSGeo-Live
-
-# For the process list on the home page
-
-process_descriptor = {}
-for process in processes:
-    abstract = process.abstract
-    identifier = process.identifier
-    process_descriptor[identifier] = abstract
-
-# This is, how you start PyWPS instance
+# Start service processes
 service = Service(processes, ['pywps.cfg'])
-
-@app.route("/")
-def hello():
-    request_url = flask.request.url
-    server_url = request_url + "/wps"
-    return flask.render_template('home.html', request_url=request_url,
-                                 server_url=server_url,
-                                 process_descriptor=process_descriptor)
 
 @app.route('/wps', methods=['GET', 'POST'])
 def wps():
     return service
 
-@app.route('/outputs/'+'<path:filename>')
-def outputfile(filename):
-    targetfile = os.path.join('outputs', filename)
-    if os.path.isfile(targetfile):
-        file_ext = os.path.splitext(targetfile)[1]
-        with open(targetfile, mode='rb') as f:
-            file_bytes = f.read()
-        mime_type = None
-        if 'xml' in file_ext:
-            mime_type = 'text/xml'
-        return flask.Response(file_bytes, content_type=mime_type)
-    else:
-        flask.abort(404)
-
-
-@app.route('/static/'+'<path:filename>')
-def staticfile(filename):
-    targetfile = os.path.join('static', filename)
-    if os.path.isfile(targetfile):
-        with open(targetfile, mode='rb') as f:
-            file_bytes = f.read()
-        mime_type = None
-        return flask.Response(file_bytes, content_type=mime_type)
-    else:
-        flask.abort(404)
-
 if __name__ == "__main__":
+    # All the code in the main is copy pasted from the pywps-flask sample, it shall remain untouched
     import argparse
 
     parser = argparse.ArgumentParser(

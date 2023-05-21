@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "929a22f0-da98-41ab-95d6-833934f2c8e6",
+		"name": "Housing Search Simulator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23112164"
+	},
+	"item": [
+		{
+			"name": "Simulate XML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<wps:Execute version=\"1.0.0\" service=\"WPS\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.opengis.net/wps/1.0.0\" xmlns:wfs=\"http://www.opengis.net/wfs\" xmlns:wps=\"http://www.opengis.net/wps/1.0.0\" xmlns:ows=\"http://www.opengis.net/ows/1.1\" xmlns:gml=\"http://www.opengis.net/gml\" xmlns:ogc=\"http://www.opengis.net/ogc\" xmlns:wcs=\"http://www.opengis.net/wcs/1.1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xsi:schemaLocation=\"http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd\">\r\n  <ows:Identifier>simulator</ows:Identifier>\r\n  <wps:DataInputs>\r\n    <wps:Input>\r\n      <ows:Identifier>data</ows:Identifier>\r\n      <wps:Data>\r\n        <wps:LiteralData>\r\n            {\"PersonId\":\"12345678\", \"Criteria\": [{\"CriteriaType\": 1, \"FunctionType\": 2, \"Weight\": 2 }, {\"CriteriaType\": 2, \"FunctionType\": 3, \"Weight\": 1 }]}\r\n        </wps:LiteralData>\r\n      </wps:Data>\r\n    </wps:Input>\r\n  </wps:DataInputs>\r\n  <wps:ResponseForm>\r\n    <wps:RawDataOutput mimeType=\"application/json\">\r\n      <ows:Identifier>response</ows:Identifier>\r\n    </wps:RawDataOutput>\r\n  </wps:ResponseForm>\r\n</wps:Execute>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/wps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"wps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Geoserver",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Layer's Style",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
