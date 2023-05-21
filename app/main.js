@@ -34,6 +34,8 @@ let scale = new ScaleLine({
 
 map.addControl(scale);
 
+// Need to make sure that the simbology is different for schools and metro stations in GeoServer,
+// otherwise they are going to be rendered the same
 const schools = new TileLayer({
   source: new TileWMS({
     url: 'http://localhost:8080/geoserver/wms',
