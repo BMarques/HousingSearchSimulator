@@ -1,11 +1,15 @@
 import './style.css';
+import 'ol-layerswitcher/dist/ol-layerswitcher.css';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import TileWMS from 'ol/source/TileWMS';
 import ImageWMS from 'ol/source/ImageWMS';
+import ImageLayer from 'ol/layer/Image';
 import OSM from 'ol/source/OSM';
 import * as olProj from 'ol/proj';
-import ImageLayer from 'ol/layer/Image';
+import {ScaleLine} from 'ol/control'
+import LayerSwitcher from 'ol-layerswitcher';
+import {Group} from 'ol/layer'
 
 const map = new Map({
   target: 'map',
@@ -21,22 +25,55 @@ const map = new Map({
   })
 });
 
-map.removeLayer()
+let scale = new ScaleLine({
+  bar: true,
+  steps: 4,
+  text: true,
+  minWidth: 120
+})
+
+map.addControl(scale);
+
+const schools = new TileLayer({
+  source: new TileWMS({
+    url: 'http://localhost:8080/geoserver/wms',
+    params: { 'LAYERS': 'csig:schools'},
+    serverType: 'geoserver'
+  }),
+  title: 'Escolas',
+  visible: true
+});
+
+const metro_stations = new TileLayer({
+  source: new TileWMS({
+    url: 'http://localhost:8080/geoserver/wms',
+    params: { 'LAYERS': 'csig:metro_stations'},
+    serverType: 'geoserver'
+  }),
+  title: 'Estações de metro',
+  visible: true
+});
+
+const overlayGroup = new Group({
+  title: 'Mapas sobrepostos',
+  fold: 'open',
+  layers: [schools, metro_stations]
+});
+
+const layerSwitcher = new LayerSwitcher({
+  tipLabel: 'Camadas',
+  startActive: true
+});
+
+map.addLayer(overlayGroup)
+map.addControl(layerSwitcher);
 
 function updateMap(wmsInfo, map) {
   // Enable CORS on GeoServer first!
   // https://docs.geoserver.org/latest/en/user/production/container.html#enable-cors
-  // let suitabilityLayer = new TileLayer({
-  //   source: new TileWMS({
-  //     url: wmsInfo.url,
-  //     params: {
-  //       'LAYERS': wmsInfo.layer
-  //     },
-  //     serverType: 'geoserver',
-  //     crossOrigin: 'anonymous',
-  //     hidpi: true
-  //   })
-  // })
+  
+  // Needed to use ImageWMS and not TileWMS, otherwise geoserver would lock the file in the backend.
+  // This should not be a concern as each store is custom to the user, there should not be a performance penalty for this.
   let suitabilityLayer = new ImageLayer({
     source: new ImageWMS({
       url: wmsInfo.url,
@@ -44,11 +81,14 @@ function updateMap(wmsInfo, map) {
       ratio: 1,
       serverType: 'geoserver',
       crossOrigin: 'anonymous'
-    })
+    }),
+    title: 'Carta de Aptidão'
   })
 
-  map.addLayer(suitabilityLayer);
+  overlayGroup.getLayers().push(suitabilityLayer)
+  
   map.render();
+  layerSwitcher.renderPanel();
 }
 
 function wpsRequest (jsonData, map) {
