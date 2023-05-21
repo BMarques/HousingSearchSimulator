@@ -7,9 +7,11 @@ import ImageWMS from 'ol/source/ImageWMS';
 import ImageLayer from 'ol/layer/Image';
 import OSM from 'ol/source/OSM';
 import * as olProj from 'ol/proj';
-import {ScaleLine} from 'ol/control'
+import { ScaleLine } from 'ol/control'
 import LayerSwitcher from 'ol-layerswitcher';
-import {Group} from 'ol/layer'
+import { Group } from 'ol/layer'
+import Overlay from 'ol/Overlay.js'
+import GeoJSON from 'ol/format/GeoJSON'
 
 const map = new Map({
   target: 'map',
@@ -39,7 +41,7 @@ map.addControl(scale);
 const schools = new TileLayer({
   source: new TileWMS({
     url: 'http://localhost:8080/geoserver/wms',
-    params: { 'LAYERS': 'csig:schools'},
+    params: { 'LAYERS': 'csig:schools' },
     serverType: 'geoserver'
   }),
   title: 'Escolas',
@@ -49,17 +51,27 @@ const schools = new TileLayer({
 const metro_stations = new TileLayer({
   source: new TileWMS({
     url: 'http://localhost:8080/geoserver/wms',
-    params: { 'LAYERS': 'csig:metro_stations'},
+    params: { 'LAYERS': 'csig:metro_stations' },
     serverType: 'geoserver'
   }),
   title: 'Estações de metro',
   visible: true
 });
 
+const studyarea = new TileLayer({
+  source: new TileWMS({
+    url: 'http://localhost:8080/geoserver/wms',
+    params: { 'LAYERS': 'csig:studyarea' },
+    serverType: 'geoserver'
+  }),
+  title: 'Lisboa',
+  visible: true
+});
+
 const overlayGroup = new Group({
   title: 'Mapas sobrepostos',
   fold: 'open',
-  layers: [schools, metro_stations]
+  layers: [studyarea, schools, metro_stations]
 });
 
 const layerSwitcher = new LayerSwitcher({
@@ -70,16 +82,82 @@ const layerSwitcher = new LayerSwitcher({
 map.addLayer(overlayGroup)
 map.addControl(layerSwitcher);
 
+// Popup
+const popup = new Overlay({
+  element: document.getElementById('popup'),
+});
+map.addOverlay(popup)
+
+const element = popup.getElement();
+map.on('click', async function (evt) {
+  let infos = await getInfoFromLayers(evt);
+  let content = "";
+  for (let info of infos) {
+    content += "<p>" + info + "</p>"
+  }
+  popup.setPosition(evt.coordinate);
+  let popover = bootstrap.Popover.getInstance(element);
+  if (popover) {
+    popover.dispose();
+  }
+  popover = new bootstrap.Popover(element, {
+    animation: false,
+    container: element,
+    content: content,
+    html: true,
+    placement: 'top',
+    title: 'Welcome to OpenLayers',
+  });
+  popover.show();
+});
+
+async function getInfoFromLayers(evt) {
+  const layers = map.getAllLayers();
+  layers.reverse();
+  let info = [];
+  for (let layer of layers) {
+    const layerProps = layer.getProperties();
+    const layerSource = layer.getSource();
+    if (layerProps.visible == true && (layerSource instanceof TileWMS || layerSource instanceof ImageWMS)) {
+
+      const infoUrl = layerSource.getFeatureInfoUrl(
+        evt.coordinate,
+        map.getView().getResolution(),
+        'EPSG:3857',
+        { 'INFO_FORMAT': 'application/json' }
+      )
+      if (infoUrl) {
+        let response = await fetch(infoUrl);
+        let finfo = await response.text(); 
+
+        const format = new GeoJSON();
+        const features = format.readFeatures(JSON.parse(finfo));
+        if (features.length > 0) {
+          let fproperties = features[0].getProperties();
+          if (fproperties.GRAY_INDEX) {
+            info.push('Recomendação: ' + fproperties.GRAY_INDEX)
+          }                
+          if (fproperties.freguesia) {
+            info.push('Freguesia: ' + fproperties.freguesia)
+          }              
+        }
+      }
+    }
+  }
+
+  return info;
+}
+
 function updateMap(wmsInfo, map) {
   // Enable CORS on GeoServer first!
   // https://docs.geoserver.org/latest/en/user/production/container.html#enable-cors
-  
+
   // Needed to use ImageWMS and not TileWMS, otherwise geoserver would lock the file in the backend.
   // This should not be a concern as each store is custom to the user, there should not be a performance penalty for this.
   let suitabilityLayer = new ImageLayer({
     source: new ImageWMS({
       url: wmsInfo.url,
-      params: {'LAYERS': wmsInfo.layer},
+      params: { 'LAYERS': wmsInfo.layer },
       ratio: 1,
       serverType: 'geoserver',
       crossOrigin: 'anonymous'
@@ -88,12 +166,12 @@ function updateMap(wmsInfo, map) {
   })
 
   overlayGroup.getLayers().push(suitabilityLayer)
-  
+
   map.render();
   layerSwitcher.renderPanel();
 }
 
-function wpsRequest (jsonData, map) {
+function wpsRequest(jsonData, map) {
   var GEOSERVER_URL = 'http://localhost:5000';
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/xml");
@@ -116,8 +194,8 @@ function wpsRequest (jsonData, map) {
               <ows:Identifier>data</ows:Identifier>\
               <wps:Data>\
                   <wps:LiteralData>' +
-                    jsonData +
-                  '</wps:LiteralData>\
+    jsonData +
+    '</wps:LiteralData>\
               </wps:Data>\
           </wps:Input>\
       </wps:DataInputs>\
@@ -137,13 +215,13 @@ function wpsRequest (jsonData, map) {
     .then(response => response.json())
     .then(result => {
       updateMap(result, map)
-      })
+    })
     .catch(error => console.log('error', error));
 };
 
 document.getElementById('submitButton').addEventListener('click', function (e) {
   e.preventDefault();
-  
+
   let criteria = []
 
   // Escolas 
@@ -168,5 +246,5 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
   };
 
   wpsRequest(JSON.stringify(payload), map);
-  
+
 });

@@ -28,7 +28,7 @@ class FunctionType(IntEnum):
 # My class needs to inherit from the Process class
 class HouseSearchSimulator(Process):
     BASE_PATH = os.getcwd()
-    DATA_PATH = os.path.join(BASE_PATH, "data")
+    DATA_PATH = os.path.join(BASE_PATH, "../data")
     OUTPUT_PATH = os.path.join(BASE_PATH, "outputs")
     GDAL_CALC_PATH = os.path.join(os.getcwd(), '.venv/Scripts/gdal_calc.py')
     USER_SPECIFIC_PATH = ""
