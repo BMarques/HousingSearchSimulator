@@ -5,6 +5,8 @@ import sys
 os.environ.pop('GDAL_DATA', None)
 os.environ.pop('PROJ_LIB', None)
 
+import shutil
+
 from enum import IntEnum
 
 from pywps import Process, LiteralInput, ComplexOutput, Format, FORMATS
@@ -29,6 +31,7 @@ class HouseSearchSimulator(Process):
     DATA_PATH = os.path.join(BASE_PATH, "data")
     OUTPUT_PATH = os.path.join(BASE_PATH, "outputs")
     GDAL_CALC_PATH = os.path.join(os.getcwd(), '.venv/Scripts/gdal_calc.py')
+    USER_SPECIFIC_PATH = ""
 
     def __init__(self):
         inputs = [LiteralInput('data', 'data', data_type="string")]
@@ -47,6 +50,13 @@ class HouseSearchSimulator(Process):
             status_supported=True
         )
 
+    def _create_folder(self, path):
+        if os.path.exists(path):
+            return
+
+        # function makedirs allows to create folders and subfolders, unlike mkdir
+        os.makedirs(path)
+
     def _handler(self, request, response):
         # Here we do the actual geospatial analysis
         # First step is to define what is necessary
@@ -59,6 +69,9 @@ class HouseSearchSimulator(Process):
         data = json.loads(request.inputs['data'][0].data)
         criteria = data["Criteria"]
         person_id = data["PersonId"]
+        
+        self.USER_SPECIFIC_PATH = os.path.join(self.OUTPUT_PATH, person_id)
+        self._create_folder(self.USER_SPECIFIC_PATH)
 
         # Derive
         self.derive()
@@ -67,7 +80,7 @@ class HouseSearchSimulator(Process):
         # Weight and Combine
         suitability = self.weight_combine((school_reclass, criteria[0]['Weight']), (metro_reclass, criteria[1]['Weight']))
         # Locate suitable regions
-        suitableregions = self.locate(suitability)
+        suitableregions = self.locate(suitability, person_id)
         # Send the suitability map to geoserver
         url, layer = self.submit_to_geoserver(suitableregions, person_id)
 
@@ -149,13 +162,13 @@ class HouseSearchSimulator(Process):
     def transform(self, criteria):
         #TODO: The calculation variables need to come from the WPS inputs
         distance_school_file = os.path.join(self.OUTPUT_PATH, "distance_schools.tif")
-        distance_school_file_reclass = os.path.join(self.OUTPUT_PATH, "distance_schools_reclass.tif")
+        distance_school_file_reclass = os.path.join(self.USER_SPECIFIC_PATH, "distance_schools_reclass.tif")
         calc = self._calculate_function(criteria[0]["FunctionType"], (20, 15)) #TODO: Not good enough, need to improve, but not important at this stage ...
         subprocess.call([sys.executable, self.GDAL_CALC_PATH, '-A', distance_school_file, '--outfile', distance_school_file_reclass , f'--calc="{calc}"' ])
 
     	#TODO: The calculation variables need to come from the WPS inputs
         metro_school_file = os.path.join(self.OUTPUT_PATH, "distance_metro.tif")
-        metro_school_file_reclass = os.path.join(self.OUTPUT_PATH, "distance_metro_reclass.tif")
+        metro_school_file_reclass = os.path.join(self.USER_SPECIFIC_PATH, "distance_metro_reclass.tif")
         calc = self._calculate_function(criteria[1]["FunctionType"], (10, 40, 20)) #TODO: Not good enough, need to improve, but not important at this stage ...
         subprocess.call([sys.executable, self.GDAL_CALC_PATH, '-A', metro_school_file, '--outfile', metro_school_file_reclass , f'--calc="{calc}"' ])
 
@@ -167,7 +180,7 @@ class HouseSearchSimulator(Process):
         currChar = startChar
         values = ()
         calc = ""
-        suitability_filename = os.path.join(self.OUTPUT_PATH, "suitability.tif")
+        suitability_filename = os.path.join(self.USER_SPECIFIC_PATH, "suitability.tif")
 
         for arg in args:
             values = values + ("-"+currChar, arg[0])
@@ -183,9 +196,9 @@ class HouseSearchSimulator(Process):
         subprocess.call([sys.executable, self.GDAL_CALC_PATH, *values , f'--calc="{finalCalc}"' ])
         return suitability_filename
     
-    def locate(self, suitabilitymap):
+    def locate(self, suitabilitymap, person_id):
         nodatavalue = '0'
-        suitableregions = os.path.join(self.OUTPUT_PATH, "final_suitability_map.tif")
+        suitableregions = os.path.join(self.USER_SPECIFIC_PATH, f"final_suitability_map_{person_id}.tif")
         calc = "0*(A<13)+A*(A>=13)"
         subprocess.call([sys.executable, self.GDAL_CALC_PATH, '-A', suitabilitymap, '--outfile', suitableregions, f'--calc="{calc}"', '--NoDataValue', nodatavalue, '--overwrite' ])
         return suitableregions

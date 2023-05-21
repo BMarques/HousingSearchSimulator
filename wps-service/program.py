@@ -37,8 +37,10 @@ from processes.house_searching_simulator import HouseSearchSimulator
 # from processes.bboxinout import Box
 # from processes.jsonprocess import TestJson
 
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
+CORS(app)
 
 processes = [
     HouseSearchSimulator()
