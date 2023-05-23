@@ -55,3 +55,6 @@ vacuum analyze project.metro_stations
 
 -- INSERT CAOP
 --shp2pgsql -D -s 3763 -g geom -I ./Continente/Cont_Freg_CAOP2022.shp project.caop | psql -h localhost -U postgres -p 5432 -d webmapping
+
+-- INSERT REDE VIARIA
+--shp2pgsql -D -s 3763 -g geom -I ./RedeViaria/RedeViaria.shp project.redeviaria | psql -h localhost -U postgres -p 5432 -d webmapping

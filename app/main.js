@@ -58,6 +58,16 @@ const metro_stations = new TileLayer({
   visible: true
 });
 
+const roads = new TileLayer({
+  source: new TileWMS({
+    url: 'http://localhost:8080/geoserver/wms',
+    params: { 'LAYERS': 'csig:redeviaria' },
+    serverType: 'geoserver'
+  }),
+  title: 'Estradas',
+  visible: true
+});
+
 const studyarea = new TileLayer({
   source: new TileWMS({
     url: 'http://localhost:8080/geoserver/wms',
@@ -71,7 +81,7 @@ const studyarea = new TileLayer({
 const overlayGroup = new Group({
   title: 'Mapas sobrepostos',
   fold: 'open',
-  layers: [studyarea, schools, metro_stations]
+  layers: [schools, metro_stations, roads, studyarea]
 });
 
 const layerSwitcher = new LayerSwitcher({
@@ -106,7 +116,7 @@ map.on('click', async function (evt) {
     content: content,
     html: true,
     placement: 'top',
-    title: 'Welcome to OpenLayers',
+    title: 'Informação',
   });
   popover.show();
 });
@@ -128,7 +138,7 @@ async function getInfoFromLayers(evt) {
       )
       if (infoUrl) {
         let response = await fetch(infoUrl);
-        let finfo = await response.text(); 
+        let finfo = await response.text();
 
         const format = new GeoJSON();
         const features = format.readFeatures(JSON.parse(finfo));
@@ -136,10 +146,10 @@ async function getInfoFromLayers(evt) {
           let fproperties = features[0].getProperties();
           if (fproperties.GRAY_INDEX) {
             info.push('Recomendação: ' + fproperties.GRAY_INDEX)
-          }                
+          }
           if (fproperties.freguesia) {
             info.push('Freguesia: ' + fproperties.freguesia)
-          }              
+          }
         }
       }
     }
@@ -193,14 +203,14 @@ function wpsRequest(jsonData, map) {
           <wps:Input>\
               <ows:Identifier>data</ows:Identifier>\
               <wps:Data>\
-                  <wps:LiteralData>' +
-    jsonData +
-    '</wps:LiteralData>\
+                  <wps:ComplexData mimeType="application/json">\
+                    <![CDATA['+jsonData+']]>\
+                  </wps:ComplexData>\
               </wps:Data>\
           </wps:Input>\
       </wps:DataInputs>\
       <wps:ResponseForm>\
-          <wps:RawDataOutput>\
+          <wps:RawDataOutput mimeType="application/json">\
               <ows:Identifier>response</ows:Identifier>\
           </wps:RawDataOutput>\
       </wps:ResponseForm>\
@@ -226,7 +236,6 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
 
   // Escolas 
   let criterium = {
-    CriteriaType: 1,
     FunctionType: parseInt(document.getElementById('schoolDistance').value),
     Weight: parseInt(document.getElementById('schoolWeightRange').value)
   }
@@ -234,9 +243,15 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
 
   // Estações de metro
   criterium = {
-    CriteriaType: 2,
     FunctionType: parseInt(document.getElementById('metroDistance').value),
     Weight: parseInt(document.getElementById('metroWeightRange').value)
+  }
+  criteria.push(criterium)
+
+  // Estradas
+  criterium = {
+    FunctionType: parseInt(document.getElementById('roadDistance').value),
+    Weight: parseInt(document.getElementById('roadWeightRange').value)
   }
   criteria.push(criterium)
 

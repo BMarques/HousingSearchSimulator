@@ -66,24 +66,24 @@ class HouseSearchSimulator(Process):
         self._create_folder(self.user_specific_output_path)
 
         # Derive
-        self.derive()
+        proximity_files = self._derive() # It returns an array of file paths in the order of School, Metro and Roads, the rest of the code knows about this order.
         # Transform
-        school_reclass, metro_reclass = self.transform(criteria)
+        transformations = self._transform(criteria, proximity_files)
         # Weight and Combine
-        suitability = self.weight_combine((school_reclass, criteria[0]['Weight']), (metro_reclass, criteria[1]['Weight']))
+        suitability = self.weight_combine(transformations, criteria)
         # Locate suitable regions
         suitableregions = self.locate(suitability, person_id)
         # Send the suitability map to geoserver
         url, layer = self.submit_to_geoserver(suitableregions, person_id)
 
-        #TODO: In case of failure in any of the steps before, return False, use a try catch finally.
         out_bytes = json.dumps(json.loads('{"url":"'+ url +'","layer":"' + layer + '"}'))
+
+        response.outputs['response'].data_format = FORMATS.JSON
+        response.outputs['response'].data = out_bytes
 
         # Cleanup raster files that are no longer needed.
         self._delete_folder(self.user_specific_output_path)
 
-        response.outputs['response'].data_format = FORMATS.JSON
-        response.outputs['response'].data = out_bytes
         return response
 
     # Required to create a user specific folder.
@@ -110,7 +110,6 @@ class HouseSearchSimulator(Process):
         # Generate tif file now
         x_res = int((x_max - x_min) / pixel_size)
         y_res = int((y_max - y_min) / pixel_size)
-
         target_ds = gdal.GetDriverByName("GTiff").Create(outfile, x_res, y_res, 1, gdal.GDT_Byte)
         target_ds.SetGeoTransform((x_min, pixel_size, 0, y_max, 0, -pixel_size))
         target_ds.SetProjection(source_layer.GetSpatialRef().ExportToWkt())
@@ -119,6 +118,9 @@ class HouseSearchSimulator(Process):
 
         # Rasterize
         gdal.RasterizeLayer(target_ds, [1], source_layer, burn_values=[1])
+        
+        # delete input and output rasters
+        del source_ds, target_ds
 
     def _compute_proximity(self, infile, outfile):
         # inspired by https://github.com/marcelovilla/gdal-py-snippets/blob/master/scripts/compute_proximity.py
@@ -143,78 +145,86 @@ class HouseSearchSimulator(Process):
 
         # delete input and output rasters
         del ds, out_ds
-    
-    def _calculate_function(self, function_type, values):
-        if function_type == FunctionType.FAR:
-            return f"10*(A>{values[0]}) + 5*(A>{values[1]})*(A<={values[0]}) + 1*(A<{values[1]})"
-        if function_type == FunctionType.MIDPOINT:
-            return f"1*(A<{values[0]}) + 1*(A>{values[1]}) + 5*(A>{values[2]})*(A<={values[1]}) + 10*(A>={values[0]})*(A<={values[2]})"
         
-    def derive(self):
+    def _derive(self):
         # TODO: These files are always the same, we could verify first if the files already exist to prevent unnecessary processing, but I'll accept the Tech Debt
+        def _inner_derive(shapefile_name, raster_name, proximity_name):
+            shapefile_file = os.path.join(self.data_path, shapefile_name)
+            raster_file = os.path.join(self.output_path, raster_name)
+            proximity_file = os.path.join(self.output_path, proximity_name)
+            self._generate_raster(shapefile_file, raster_file)
+            self._compute_proximity(raster_file, proximity_file)
+            return proximity_file
+
         # Derive school distance
-        schools_shapefile_location = os.path.join(self.data_path, "POIEducacao")
-        schools_raster_filename = os.path.join(self.output_path, "schools.tif")
-        schools_proximity_raster_filename = os.path.join(self.output_path, "distance_schools.tif")
-        self._generate_raster(schools_shapefile_location, schools_raster_filename)
-        self._compute_proximity(schools_raster_filename, schools_proximity_raster_filename)
+        school_proximity_file = _inner_derive("POIEducacao", "schools.tif", "distance_schools.tif")
 
         # Derive metro distance
-        metro_shapefile_location = os.path.join(self.data_path, "POITransportes")
-        metro_raster_filename = os.path.join(self.output_path, "metro.tif")
-        metro_proximity_raster_filename = os.path.join(self.output_path, "distance_metro.tif")
-        self._generate_raster(metro_shapefile_location, metro_raster_filename)
-        self._compute_proximity(metro_raster_filename, metro_proximity_raster_filename)
+        metro_proximity_file = _inner_derive("POITransportes", "metro.tif", "distance_metro.tif")
 
         # Derive roads distance
-        roads_shapefile_location = os.path.join(self.data_path, "RedeViaria")
-        roads_raster_filename = os.path.join(self.output_path, "roads.tif")
-        roads_proximity_raster_filename = os.path.join(self.output_path, "distance_roads.tif")
-        self._generate_raster(roads_shapefile_location, roads_raster_filename)
-        self._compute_proximity(roads_raster_filename, roads_proximity_raster_filename)
-        return
+        roads_proximity_file = _inner_derive("RedeViaria", "roads.tif", "distance_roads.tif")
+
+        return [school_proximity_file, metro_proximity_file, roads_proximity_file]
     
-    def transform(self, criteria):
-        #TODO: The calculation variables need to come from the WPS inputs
-        distance_school_file = os.path.join(self.output_path, "distance_schools.tif")
+    def _calculate_function(self, function_type, values):
+        # TODO: This implementation is admittedly not good, would need to completely rethink. This is a project by itself.
+        if function_type == FunctionType.NEAR:
+            return f"10*(A<={values[0]}) + 5*(A>{values[0]})*(A<={values[1]}) + 1*(A>{values[1]})"
+        if function_type == FunctionType.FAR:
+            return f"10*(A>={values[1]}) + 5*(A>{values[0]})*(A<{values[1]}) + 1*(A<={values[0]})"
+        if function_type == FunctionType.MIDPOINT:
+            return f"1*(A<{values[0]}) + 1*(A>{values[2]}) + 5*(A<{values[1] - 5})*(A>{values[1] + 5}) + 10*(A>={values[1] - 5})*(A<={values[1] + 5})"
+    
+    def _transform(self, criteria, proximity_files):
         distance_school_file_reclass = os.path.join(self.user_specific_output_path, "distance_schools_reclass.tif")
-        calc = self._calculate_function(criteria[0]["FunctionType"], (20, 15)) #TODO: Not good enough, need to improve, but not important at this stage ...
-        subprocess.call([sys.executable, self.gdal_calc_path, '-A', distance_school_file, '--outfile', distance_school_file_reclass , f'--calc="{calc}"' ])
+        calc = self._calculate_function(criteria[0]["FunctionType"], (10, 30, 50)) #TODO: The values should be decided by the user, not by code
+        subprocess.call([sys.executable, self.gdal_calc_path, '-A', proximity_files[0], '--outfile', distance_school_file_reclass , f'--calc="{calc}"' ])
 
-    	#TODO: The calculation variables need to come from the WPS inputs
-        metro_school_file = os.path.join(self.output_path, "distance_metro.tif")
         metro_school_file_reclass = os.path.join(self.user_specific_output_path, "distance_metro_reclass.tif")
-        calc = self._calculate_function(criteria[1]["FunctionType"], (10, 40, 20)) #TODO: Not good enough, need to improve, but not important at this stage ...
-        subprocess.call([sys.executable, self.gdal_calc_path, '-A', metro_school_file, '--outfile', metro_school_file_reclass , f'--calc="{calc}"' ])
+        calc = self._calculate_function(criteria[1]["FunctionType"], (10, 30, 50)) #TODO: The values should be decided by the user, not by code
+        subprocess.call([sys.executable, self.gdal_calc_path, '-A', proximity_files[1], '--outfile', metro_school_file_reclass , f'--calc="{calc}"' ])
 
-        return distance_school_file_reclass, metro_school_file_reclass
+        roads_school_file_reclass = os.path.join(self.user_specific_output_path, "distance_roads_reclass.tif")
+        calc = self._calculate_function(criteria[2]["FunctionType"], (5, 13, 20)) #TODO: The values should be decided by the user, not by code
+        subprocess.call([sys.executable, self.gdal_calc_path, '-A', proximity_files[2], '--outfile', roads_school_file_reclass , f'--calc="{calc}"' ])
+
+        return [distance_school_file_reclass, metro_school_file_reclass, roads_school_file_reclass]
     
-    def weight_combine(self, *args):
-        #TODO: The weights need to come from the WPS inputs
+    def weight_combine(self, transformations, criteria):
         startChar = 'A'
         currChar = startChar
         values = ()
         calc = ""
         suitability_filename = os.path.join(self.user_specific_output_path, "suitability.tif")
+        weightSum = 0
 
-        for arg in args:
-            values = values + ("-"+currChar, arg[0])
+        for x in range(3):
+            values = values + ("-"+currChar, transformations[x])
             if calc:
                 calc = calc + " + "
-            calc = calc + str(arg[1]) + "*" + currChar
+            calc = calc + str(criteria[x]['Weight']) + "*" + currChar
             currChar = chr(ord(currChar) + 1)
+            weightSum += criteria[x]['Weight']
         values += ('--outfile', suitability_filename)
         values += ('--extent', "intersect")
         values += ('--overwrite', )
-        finalCalc = f"({calc})/{len(args)}"
+        finalCalc = f"({calc})/{weightSum}"
         
         subprocess.call([sys.executable, self.gdal_calc_path, *values , f'--calc="{finalCalc}"' ])
-        return suitability_filename
+
+        # Clip the raster
+        boundary_file = os.path.join(self.data_path, "StudyArea")
+        suitability_clipped_filename = os.path.join(self.user_specific_output_path, "suitability_clipped.tif")
+        ds = gdal.Open(suitability_filename)
+        gdal.Warp(suitability_clipped_filename, ds, cutlineDSName = boundary_file, cropToCutline= True, dstNodata = "-999")
+        del ds
+        return suitability_clipped_filename
     
     def locate(self, suitabilitymap, person_id):
         nodatavalue = '0'
         suitableregions = os.path.join(self.user_specific_output_path, f"final_suitability_map_{person_id}.tif")
-        calc = "0*(A<13)+A*(A>=13)"
+        calc = "0*(A<8)+A*(A>=8)"
         subprocess.call([sys.executable, self.gdal_calc_path, '-A', suitabilitymap, '--outfile', suitableregions, f'--calc="{calc}"', '--NoDataValue', nodatavalue, '--overwrite' ])
         return suitableregions
 
