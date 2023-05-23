@@ -13,3 +13,9 @@ body {
 .popover-body {
   min-width: 276px;
 }
+
+#legendContainer {
+  position: relative;
+  top: -220px;
+  left: 10px;
+}
