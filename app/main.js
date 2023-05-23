@@ -22,8 +22,11 @@ const map = new Map({
   ],
   view: new View({
     center: [0, 0],
-    center: olProj.transform([-9.15, 38.75], 'EPSG:4326', 'EPSG:3857'),
-    zoom: 12.5
+    center: olProj.transform([-9.15, 38.75], 'EPSG:4326', 'EPSG:3857'), // center it on Lisbon
+    extent: [-1032072.1137317438, 4675857.5686363075, -1005074.567785163, 4695990.873671545], // make sure that the user can only see Lisbon, saves up on downloads
+    zoom: 12.5,
+    minZoom: 10.5,
+    maxZoom: 14.5
   })
 });
 
@@ -158,20 +161,29 @@ async function getInfoFromLayers(evt) {
   return info;
 }
 
+const updateLegend = function (wmsSource, resolution) {
+  const graphicUrl = wmsSource.getLegendUrl(resolution);
+  document.getElementById('legendContainer').style.display = "block";
+  const img = document.getElementById('legend');
+  img.src = graphicUrl;
+};
+
 function updateMap(wmsInfo, map) {
   // Enable CORS on GeoServer first!
   // https://docs.geoserver.org/latest/en/user/production/container.html#enable-cors
 
   // Needed to use ImageWMS and not TileWMS, otherwise geoserver would lock the file in the backend.
   // This should not be a concern as each store is custom to the user, there should not be a performance penalty for this.
+  const wmsSource = new ImageWMS({
+    url: wmsInfo.url,
+    params: { 'LAYERS': wmsInfo.layer },
+    ratio: 1,
+    serverType: 'geoserver',
+    crossOrigin: 'anonymous'
+  })
+
   let suitabilityLayer = new ImageLayer({
-    source: new ImageWMS({
-      url: wmsInfo.url,
-      params: { 'LAYERS': wmsInfo.layer },
-      ratio: 1,
-      serverType: 'geoserver',
-      crossOrigin: 'anonymous'
-    }),
+    source: wmsSource,
     title: 'Carta de Aptidão'
   })
 
@@ -179,6 +191,9 @@ function updateMap(wmsInfo, map) {
 
   map.render();
   layerSwitcher.renderPanel();
+
+  const resolution = map.getView().getResolution();
+  updateLegend(wmsSource, resolution);
 }
 
 function wpsRequest(jsonData, map) {
@@ -231,7 +246,7 @@ function wpsRequest(jsonData, map) {
 
 document.getElementById('submitButton').addEventListener('click', function (e) {
   e.preventDefault();
-
+  
   let criteria = []
 
   // Escolas 
