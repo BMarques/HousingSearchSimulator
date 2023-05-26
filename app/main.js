@@ -280,7 +280,7 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
     Weight: parseInt(document.getElementById('roadWeightRange').value)
   }
   criteria.push(criterium)
-  // Identificação da pessoa
+  
   let payload = {
     PersonId: document.getElementById('idNumber').value,
     Criteria: criteria
