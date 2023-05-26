@@ -16,6 +16,8 @@ body {
 
 #legendContainer {
   position: relative;
-  top: -220px;
+  top: -150px;
   left: 10px;
+  width: 120px;
+  background: white;
 }

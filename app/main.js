@@ -12,6 +12,9 @@ import LayerSwitcher from 'ol-layerswitcher';
 import { Group } from 'ol/layer'
 import Overlay from 'ol/Overlay.js'
 import GeoJSON from 'ol/format/GeoJSON'
+import { toLonLat } from 'ol/proj';
+
+let suitabilityLayer = null;
 
 const map = new Map({
   target: 'map',
@@ -21,9 +24,8 @@ const map = new Map({
     })
   ],
   view: new View({
-    center: [0, 0],
     center: olProj.transform([-9.15, 38.75], 'EPSG:4326', 'EPSG:3857'), // center it on Lisbon
-    extent: [-1032072.1137317438, 4675857.5686363075, -1005074.567785163, 4695990.873671545], // make sure that the user can only see Lisbon, saves up on downloads
+    extent: [-1032072.1137317438, 4675857.5686363075, -1005074.567785163, 4695990.873671545],
     zoom: 12.5,
     minZoom: 10.5,
     maxZoom: 14.5
@@ -48,7 +50,7 @@ const schools = new TileLayer({
     serverType: 'geoserver'
   }),
   title: 'Escolas',
-  visible: true
+  visible: false
 });
 
 const metro_stations = new TileLayer({
@@ -58,7 +60,7 @@ const metro_stations = new TileLayer({
     serverType: 'geoserver'
   }),
   title: 'Estações de metro',
-  visible: true
+  visible: false
 });
 
 const roads = new TileLayer({
@@ -68,7 +70,7 @@ const roads = new TileLayer({
     serverType: 'geoserver'
   }),
   title: 'Estradas',
-  visible: true
+  visible: false
 });
 
 const studyarea = new TileLayer({
@@ -82,7 +84,7 @@ const studyarea = new TileLayer({
 });
 
 const overlayGroup = new Group({
-  title: 'Mapas sobrepostos',
+  title: 'Camadas',
   fold: 'open',
   layers: [schools, metro_stations, roads, studyarea]
 });
@@ -103,7 +105,12 @@ map.addOverlay(popup)
 
 const element = popup.getElement();
 map.on('click', async function (evt) {
-  let infos = await getInfoFromLayers(evt);
+  let infos = await getInfoFromSuitability(evt);
+  // Get address information too
+  var coord = toLonLat(evt.coordinate);
+  infos.push(await reverseGeocode(coord));
+  infos.reverse();
+
   let content = "";
   for (let info of infos) {
     content += "<p>" + info + "</p>"
@@ -124,39 +131,41 @@ map.on('click', async function (evt) {
   popover.show();
 });
 
-async function getInfoFromLayers(evt) {
-  const layers = map.getAllLayers();
-  layers.reverse();
+async function getInfoFromSuitability(evt) {
   let info = [];
-  for (let layer of layers) {
-    const layerProps = layer.getProperties();
-    const layerSource = layer.getSource();
-    if (layerProps.visible == true && (layerSource instanceof TileWMS || layerSource instanceof ImageWMS)) {
+  if (suitabilityLayer == null) {
+    info.push("Recomendação ainda por obter! Preencha o formulário e clique no botão calcular aptidão.");
+    return info;
+  }
 
-      const infoUrl = layerSource.getFeatureInfoUrl(
-        evt.coordinate,
-        map.getView().getResolution(),
-        'EPSG:3857',
-        { 'INFO_FORMAT': 'application/json' }
-      )
-      if (infoUrl) {
-        let response = await fetch(infoUrl);
-        let finfo = await response.text();
+  const layerProps = suitabilityLayer.getProperties();
+  const layerSource = suitabilityLayer.getSource();
+  if (layerProps.visible == true && (layerSource instanceof TileWMS || layerSource instanceof ImageWMS)) {
 
-        const format = new GeoJSON();
-        const features = format.readFeatures(JSON.parse(finfo));
-        if (features.length > 0) {
-          let fproperties = features[0].getProperties();
-          if (fproperties.GRAY_INDEX) {
-            info.push('Recomendação: ' + fproperties.GRAY_INDEX)
-          }
-          if (fproperties.freguesia) {
-            info.push('Freguesia: ' + fproperties.freguesia)
-          }
+    const infoUrl = layerSource.getFeatureInfoUrl(
+      evt.coordinate,
+      map.getView().getResolution(),
+      'EPSG:3857',
+      { 'INFO_FORMAT': 'application/json' }
+    )
+    if (infoUrl) {
+      let response = await fetch(infoUrl);
+      let finfo = await response.text();
+
+      const format = new GeoJSON();
+      const features = format.readFeatures(JSON.parse(finfo));
+      if (features.length > 0) {
+        let fproperties = features[0].getProperties();
+        if (fproperties.GRAY_INDEX) {
+          info.push('Recomendação: ' + fproperties.GRAY_INDEX)
+        }
+        else {
+          info.push('Sem recomendações para esta zona.')
         }
       }
     }
   }
+
 
   return info;
 }
@@ -182,7 +191,7 @@ function updateMap(wmsInfo, map) {
     crossOrigin: 'anonymous'
   })
 
-  let suitabilityLayer = new ImageLayer({
+  suitabilityLayer = new ImageLayer({
     source: wmsSource,
     title: 'Carta de Aptidão'
   })
@@ -219,7 +228,7 @@ function wpsRequest(jsonData, map) {
               <ows:Identifier>data</ows:Identifier>\
               <wps:Data>\
                   <wps:ComplexData mimeType="application/json">\
-                    <![CDATA['+jsonData+']]>\
+                    <![CDATA['+ jsonData + ']]>\
                   </wps:ComplexData>\
               </wps:Data>\
           </wps:Input>\
@@ -240,41 +249,47 @@ function wpsRequest(jsonData, map) {
     .then(response => response.json())
     .then(result => {
       updateMap(result, map)
+      document.getElementById('submitWaitMessage').style.display = "none"
     })
-    .catch(error => console.log('error', error));
+    .catch(error => {
+      document.getElementById('submitWaitMessage').style.display = "none"
+      document.getElementById('submitErrorMessage').style.display = "inline-block"
+    });
 };
 
 document.getElementById('submitButton').addEventListener('click', function (e) {
   e.preventDefault();
-  
   let criteria = []
-
+  document.getElementById('submitWaitMessage').style.display = "inline-block"
+  document.getElementById('submitErrorMessage').style.display = "none"
   // Escolas 
   let criterium = {
     FunctionType: parseInt(document.getElementById('schoolDistance').value),
     Weight: parseInt(document.getElementById('schoolWeightRange').value)
   }
   criteria.push(criterium)
-
   // Estações de metro
   criterium = {
     FunctionType: parseInt(document.getElementById('metroDistance').value),
     Weight: parseInt(document.getElementById('metroWeightRange').value)
   }
   criteria.push(criterium)
-
   // Estradas
   criterium = {
     FunctionType: parseInt(document.getElementById('roadDistance').value),
     Weight: parseInt(document.getElementById('roadWeightRange').value)
   }
   criteria.push(criterium)
-
+  // Identificação da pessoa
   let payload = {
     PersonId: document.getElementById('idNumber').value,
     Criteria: criteria
   };
-
   wpsRequest(JSON.stringify(payload), map);
-
 });
+
+async function reverseGeocode(coords) {
+  var response = await fetch('http://nominatim.openstreetmap.org/reverse?format=json&lon=' + coords[0] + '&lat=' + coords[1]);
+  var json = await response.json();
+  return json.display_name;
+}

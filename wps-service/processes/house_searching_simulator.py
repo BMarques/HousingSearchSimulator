@@ -18,9 +18,6 @@ from pywps import Process, ComplexInput, ComplexOutput, Format, FORMATS
 from osgeo import gdal
 from osgeo import ogr
 
-# Required for this process to be able to send the result of the analysis to geoserver.
-from geo.Geoserver import Geoserver
-
 # This an enum that allows mapping a number (it will come from the frontend as numbers) to a specific type
 # This allows to understand what criteria the user wants to define what's a good distance type from something.
 # For instance if the person wants to be close to something, or far from it, or somewhere where it's not far or near.
@@ -45,7 +42,7 @@ class HouseSearchSimulator(Process):
             self._handler,
             identifier='simulator',
             title='Process House Searching Simulator',
-            abstract='This process does a multi-criteria analysis to recommend specific locations, depending on the user input',
+            abstract='This process does a multi-criteria analysis to recommend specific locations, depending on the user input. For the input, use the following structure <![CDATA[{"PersonId":"12345678","Criteria":[{"FunctionType":2,"Weight":2},{"FunctionType":1,"Weight":2},{"FunctionType":2,"Weight":2}]}]]>',
             inputs=inputs,
             outputs=outputs
         )
@@ -229,6 +226,9 @@ class HouseSearchSimulator(Process):
         return suitableregions
 
     def submit_to_geoserver(self, suitable_regions, person_id):
+        # Required for this process to be able to send the result of the analysis to geoserver.
+        from geo.Geoserver import Geoserver
+
         geo = Geoserver('http://127.0.0.1:8080/geoserver', username='admin', password='geoserver')
         workspace = 'csig'
         layer_name = f'SuitabilityRegions_{person_id}'
